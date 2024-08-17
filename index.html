@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <title>Real Chess Checklist</title>
+  </head>
+  <body>
+    <div class="container">
+      <h4>List your top 3 Candidate Moves</h4>
+      <div
+        class="row"
+        x-data="{
+            canOne: '',
+            canTwo: '',
+            canThree: '',
+
+            resOne: ['','','','',''],
+            resTwo: ['','','','',''],
+            resThree: ['','','','',''],
+
+            safOne: [false,false,false,false,false],
+            safTwo: [false,false,false,false,false],
+            safThree: [false,false,false,false,false],
+    
+            makeMove() {
+                this.canOne = '';
+                this.canTwo = '';
+                this.canThree = '';
+                this.resOne = ['','','','',''];
+                this.resTwo = ['','','','',''];
+                this.resThree = ['','','','',''];
+                this.safOne = [false,false,false,false,false];
+                this.safTwo = [false,false,false,false,false];
+                this.safThree = [false,false,false,false,false];
+            }
+        }"
+      >
+        <div class="four columns">
+          <input type="text" x-model="canOne" placeholder="Move 1..." />
+          <input type="text" x-model="canTwo" placeholder="Move 2..." />
+          <input type="text" x-model="canThree" placeholder="Move 3..." />
+          <button @click="makeMove()">Make my move</button>
+        </div>
+
+        <div class="eight columns">
+          <div x-show="canOne.trim()">
+            <div x-text="canOne"></div>
+            <div>What are 5 possible responses from your opponent?</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resOne[0]"
+              />
+              <span
+                ><input type="checkbox" x-model="safOne[0]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resOne[1]"
+              />
+              <span
+                ><input type="checkbox" x-model="safOne[1]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resOne[2]"
+              />
+              <span
+                ><input type="checkbox" x-model="safOne[2]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resOne[3]"
+              />
+              <span
+                ><input type="checkbox" x-model="safOne[3]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resOne[4]"
+              />
+              <span
+                ><input type="checkbox" x-model="safOne[4]" /> Are you
+                safe?</span
+              >
+            </div>
+          </div>
+
+          <div x-show="canTwo.trim()">
+            <div x-text="canTwo"></div>
+            <div>What are 5 possible responses from your opponent?</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resTwo[0]"
+              />
+              <span
+                ><input type="checkbox" x-model="safTwo[0]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resTwo[1]"
+              />
+              <span
+                ><input type="checkbox" x-model="safTwo[1]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resTwo[2]"
+              />
+              <span
+                ><input type="checkbox" x-model="safTwo[2]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resTwo[3]"
+              />
+              <span
+                ><input type="checkbox" x-model="safTwo[3]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resTwo[4]"
+              />
+              <span
+                ><input type="checkbox" x-model="safTwo[4]" /> Are you
+                safe?</span
+              >
+            </div>
+          </div>
+
+          <div x-show="canThree.trim()">
+            <div x-text="canThree"></div>
+            <div>What are 5 possible responses from your opponent?</div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resThree[0]"
+              />
+              <span
+                ><input type="checkbox" x-model="safThree[0]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resThree[1]"
+              />
+              <span
+                ><input type="checkbox" x-model="safThree[1]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resThree[2]"
+              />
+              <span
+                ><input type="checkbox" x-model="safThree[2]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resThree[3]"
+              />
+              <span
+                ><input type="checkbox" x-model="safThree[3]" /> Are you
+                safe?</span
+              >
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Response ..."
+                x-model="resThree[4]"
+              />
+              <span
+                ><input type="checkbox" x-model="safThree[4]" /> Are you
+                safe?</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
