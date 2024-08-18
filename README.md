@@ -4,6 +4,8 @@ A tool to help you play better chess. The idea behind this project is based on a
 This was a term coined by Dan Heisman that he describes in a Chess Cafe article.
 You can read the article [here](https://www.chesscafe.com/text/real.txt)
 
+And here is my interactive [Real Chess Checklist](https://devapalasingam.github.io/real-chess-checklist/)
+
 ## How to use this tool to improve your chess
 
 Obviously in real games, you're not allowed to use a tool like this. Plus this tool would be totally useless for blitz/rapid games.
