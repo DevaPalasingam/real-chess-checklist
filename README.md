@@ -16,3 +16,8 @@ Here is my recommendation:
 - Try to force yourself to go through all the steps **every move**, even the seemingly obvious ones
 
 It will definitly feel rigid and boring at first. But if you're really disciplined about it, it will make your games much more consistent.
+
+## Technologies used
+
+- Alpinejs
+- SkeletonCSS
